@@ -1,0 +1,17 @@
+<h1>{{name}} <br/> {{id}}</h1>
+  <p><strong>Address: </strong> {{address.street}}, {{address.city}}, {{address.state}} </p>
+  <h3>HB</h3>
+<button (click)="tgHobbies()">{{showHobbies ? "hide hb" : "show hb"}}</button>
+  <ul *ngIf="showHobbies">
+    <li *ngFor="let hobby of hobbies">
+      {{hobby}}
+    </li>
+  </ul>
+  <form>
+    <label>Name: </label>
+    <input type="text" name="name" [(ngModel)]="name"/>
+    <input type="text" name="id" [(ngModel)]="id"/>
+    <input type="text" name="street" [(ngModel)]="address.street"/>
+  </form>
+
+  <li></li>
